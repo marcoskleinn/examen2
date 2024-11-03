@@ -8,6 +8,14 @@ public class Perros extends Mascota{
 		super(nombre, edad, peso, duenio);
 		this.tieneGarrapatas = tieneGarrapatas;
 	}
+
+	public boolean isTieneGarrapatas() {
+		return tieneGarrapatas;
+	}
+
+	public void setTieneGarrapatas(boolean tieneGarrapatas) {
+		this.tieneGarrapatas = tieneGarrapatas;
+	}
 	
 
 	
