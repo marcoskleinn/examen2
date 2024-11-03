@@ -7,9 +7,12 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Mascota mascota = new Perros(null, 0, 0, null, false);
 		
-		Duenio duenio = new Duenio(null, null, 0, mascota, null);
+		Duenio duenio = new Duenio(null, null, 0, null);
+		
+		
+		Mascota mascota = new Perros(null, 0, 0, duenio, false);
+		
 		
 		Veterinaria vete = new Veterinaria(mascota, null, duenio);
 		
@@ -33,7 +36,7 @@ public class Main {
 				break;	
 				
 			case 2:
-				vete.examinarMascota();
+				vete.examinarMascota(mascota);
 				break;	
 				
 			case 3:

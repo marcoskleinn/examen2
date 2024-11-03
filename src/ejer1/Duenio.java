@@ -11,12 +11,11 @@ public class Duenio {
 	private int telefono;
 	private Mascota mascota;
 	private ArrayList<String> vacunas;
-	public Duenio(String nombre, String apellido, int telefono, Mascota mascota, ArrayList<String> vacunas) {
+	public Duenio(String nombre, String apellido, int telefono, ArrayList<String> vacunas) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.telefono = telefono;
-		this.mascota = mascota;
 		this.vacunas = new ArrayList<>();
 	}
 	public String getNombre() {

@@ -58,7 +58,7 @@ public class Veterinaria {
 		
 	}
 	
-	public void examinarMascota() {
+	public void examinarMascota(Mascota mascota) {
 		this.mascota.setNombre(JOptionPane.showInputDialog("Ingrese nombre de la mascota"));
 		this.mascota.setEdad(Integer.parseInt(JOptionPane.showInputDialog("Ingrese edad")));
 		this.mascota.setPeso(Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso")));
@@ -76,7 +76,7 @@ public class Veterinaria {
 			}
 			String bien = JOptionPane.showInputDialog(null, "Esta bien?");
 			if (bien.equalsIgnoreCase("si")) {
-				JOptionPane.showMessageDialog(null, "Esta Bien" + this.mascota.getNombre() + " traigalo en 6 meses para otro control");
+				JOptionPane.showMessageDialog(null, "Esta Bien" + this.mascota.getNombre() + " traigalo en 6 meses para otro control al " + this.mascota);
 			} else if (bien.equalsIgnoreCase("no")) {
 				JOptionPane.showMessageDialog(null, "Le vamos a tener que hacer unos estudios, su peso que es de " + this.mascota.getPeso() + "no es normal");
 			}
