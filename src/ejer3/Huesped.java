@@ -36,57 +36,88 @@ public class Huesped {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	public Habitacion getHabitacion() {
+	
+	
+	
+	public Habitacion getHabitacionn() {
 		return habitacion;
 	}
-	public void setHabitacion(Habitacion habitacion) {
+	public void setHabitacionn(Habitacion habitacion) {
 		this.habitacion = habitacion;
 	}
-	
-	
 	public ArrayList<Integer> reservarHabitacion() {
+		
+		
+		String desea;
 
 		this.setNombre(JOptionPane.showInputDialog("Ingrese su nombre"));
 		this.setApellido(JOptionPane.showInputDialog("Ingrese su apellido"));
 		this.setDni(JOptionPane.showInputDialog("Ingrese su dni"));
-		
-		String[] habitacionn = {
-			"Habitacion Presidencial", "Habitacion deluxe", "Habitacion Economica"	
-		};
-		
-		
-			JOptionPane.showMessageDialog(null, "Elija una habitacion");
+
+			JOptionPane.showMessageDialog(null, "Tenemos habitacion: Habitacion Presidencial \n"
+					+ "Habitacion Deluxe \n"
+					+ "Habitacion Economica");
 			
-			int opcion = JOptionPane.showOptionDialog(null, habitacionn, apellido, 0, 0, null, habitacionn, habitacionn[0]);
+			JOptionPane.showMessageDialog(null, "Elija en numero la siguiente habitacion:");
+			int numeroo = Integer.parseInt(JOptionPane.showInputDialog("Numero:"));
 			
-			if (opcion == 0) {
-				this.habitacion.getHotel().setPrecioXNoche((int) (Math.random() * 100000000));
+			if (numeroo == 1) {
+				Habitacion habitacion = new HabitacionPresiedncial(null, numeroo, true);
+				habitacion.getHotel().setPrecioXNoche((int) (Math.random() * 100000000));
 				
 				JOptionPane.showMessageDialog(null, "El precio por Noche es de esta habitacion" + this.habitacion.getHotel().getPrecioXNoche());
 				
-				String desea = JOptionPane.showInputDialog("Desea adquirir esta habitacion?");
+				 desea = JOptionPane.showInputDialog("Desea adquirir esta habitacion?");
 				
 				if (desea.equalsIgnoreCase("si")) {
 					
 					int numero = (int) (Math.random()* 500);
 					
-					 habitacion.setNumeroHabitacion(numero);
 					
-					this.habitacion.getHabitaciones().add(habitacion.getNumeroHabitacion());
+					
+					this.habitacion.getHabitaciones().add(numero);
+				}
+			} else if (numeroo == 2) {
+				Habitacion habitacion = new HabitacionDeluxe(null, numeroo, false);
+				habitacion.getHotel().setPrecioXNoche((int) (Math.random() * 100000000));
+				
+				JOptionPane.showMessageDialog(null, "El precio por Noche es de esta habitacion" + this.habitacion.getHotel().getPrecioXNoche());
+				
+				 desea = JOptionPane.showInputDialog("Desea adquirir esta habitacion?");
+				
+				if (desea.equalsIgnoreCase("si")) {
+					
+					int numero = (int) (Math.random()* 500);
+					
+					
+					
+					this.habitacion.getHabitaciones().add(numero);
+				} 
+			} else if (numeroo == 3) {
+				Habitacion habitacion = new HabitacionEconomica(null, numeroo, false);
+				habitacion.getHotel().setPrecioXNoche((int) (Math.random() * 100000000));
+				
+				JOptionPane.showMessageDialog(null, "El precio por Noche es de esta habitacion" + this.habitacion.getHotel().getPrecioXNoche());
+				
+				 desea = JOptionPane.showInputDialog("Desea adquirir esta habitacion?");
+				
+				if (desea.equalsIgnoreCase("si")) {
+					
+					int numero = (int) (Math.random()* 500);
+					
+					
+					this.habitacion.getHabitaciones().add(numero);
+					
+					
 				}
 			}
-			return habitacion.getHabitaciones();
 			
 			
+				
 			
-			
-	
-		
-		
-		
-		
+				
+		return habitacion.getHabitaciones();
 		
 		
 	}
-
 }

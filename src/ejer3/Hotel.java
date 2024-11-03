@@ -1,17 +1,22 @@
 package ejer3;
 
+import javax.swing.JOptionPane;
+
 public class Hotel {
 	
 	private String nombre;
 	private int estrellas;
 	private String direccion;
 	private int precioXNoche;
-	public Hotel(String nombre, int estrellas, String direccion, int precioXNoche) {
+	private Huesped huesped;
+	
+	public Hotel(String nombre, int estrellas, String direccion, int precioXNoche, Huesped huesped) {
 		super();
 		this.nombre = nombre;
 		this.estrellas = estrellas;
 		this.direccion = direccion;
 		this.precioXNoche = precioXNoche;
+		this.huesped = huesped;
 	}
 	public String getNombre() {
 		return nombre;
@@ -38,6 +43,18 @@ public class Hotel {
 		this.precioXNoche = precioXNoche;
 	}
 	
+	
+	public Huesped getHuesped() {
+		return huesped;
+	}
+	public void setHuesped(Huesped huesped) {
+		this.huesped = huesped;
+	}
+	public void bienvenida() {
+		
+		JOptionPane.showMessageDialog(null, "Bienvenido " + this.huesped.getNombre());
+		
+	}
 	
 
 }
