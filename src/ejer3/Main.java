@@ -10,7 +10,7 @@ public class Main {
 		
 		
 		Huesped huesped1 = new Huesped(null, null, null);
-		Habitacion habitacion1 = new HabitacionPresiedncial( 0, huesped1, false);
+		Habitacion habitacion1 = new HabitacionPresiedncial( null, 0, null, huesped1, false);
 		
 		Hotel hotel = new Hotel("Park royale", 5, "avenida123", huesped1);
 		

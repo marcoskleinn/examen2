@@ -24,7 +24,7 @@ public class Main {
 		
 		do {
 			
-			opcion = JOptionPane.showOptionDialog(null, vete, null, opcion, opcion, null, opciones, opciones[0]);
+			opcion = JOptionPane.showOptionDialog(null, "Menu", null, opcion, opcion, null, opciones, opciones[0]);
 			
 			switch (opcion) {
 			case 0:
@@ -32,6 +32,7 @@ public class Main {
 				break;
 				
 			case 1:
+				vete.setNombreDeLaProfesional("Juan");
 				vete.llevarMascota();
 				break;	
 				

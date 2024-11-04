@@ -9,7 +9,9 @@ public class HabitacionEconomica extends Habitacion{
 
 	
 
-	public HabitacionEconomica(Hotel hotel, int numeroHabitacion, Huesped huesped, boolean tieneBalcon) {
+	
+	public HabitacionEconomica(Hotel hotel, int numeroHabitacion, ArrayList<Integer> habitaciones, Huesped huesped,
+			boolean tieneBalcon) {
 		super(numeroHabitacion, huesped);
 		this.tieneBalcon = tieneBalcon;
 	}

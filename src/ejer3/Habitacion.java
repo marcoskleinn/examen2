@@ -48,7 +48,7 @@ public class Habitacion {
 		
 		
 			
-			for (Integer habita : habitaciones) {
+			for (Integer habita : this.huesped.getHabitacion().getHabitaciones()) {
 				
 				if (this.getHabitaciones().size() == habita) {
 					JOptionPane.showMessageDialog(null, "ya hay una habitacion reservada");
