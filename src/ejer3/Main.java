@@ -7,11 +7,12 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Habitacion habitacion1 = new HabitacionPresiedncial(null, 0, false);
 		
-		Huesped huesped1 = new Huesped(null, null, null, null);
 		
-		Hotel hotel = new Hotel(null, 0, null, 0, huesped1);
+		Huesped huesped1 = new Huesped(null, null, null);
+		Habitacion habitacion1 = new HabitacionPresiedncial( 0, huesped1, false);
+		
+		Hotel hotel = new Hotel("Park royale", 5, "avenida123", huesped1);
 		
 		int opcion = 0;
 		
@@ -26,6 +27,7 @@ public class Main {
 			
 			switch (opcion) {
 			case 0:
+				
 				huesped1.reservarHabitacion();
 				break;
 				

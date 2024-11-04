@@ -9,11 +9,13 @@ public class Habitacion {
 	private Hotel hotel;
 	private int numeroHabitacion;
 	private ArrayList<Integer> habitaciones;
-	public Habitacion(Hotel hotel, int numeroHabitacion) {
+	private Huesped huesped;
+	public Habitacion(int numeroHabitacion, Huesped huesped) {
 		super();
 		this.hotel = hotel;
 		this.numeroHabitacion = numeroHabitacion;
 		this.habitaciones = new ArrayList<>();
+		this.huesped = huesped;
 	}
 	public Hotel getHotel() {
 		return hotel;
@@ -34,21 +36,31 @@ public class Habitacion {
 		this.habitaciones = habitaciones;
 	}
 	
+	
+	
+	public Huesped getHuesped() {
+		return huesped;
+	}
+	public void setHuesped(Huesped huesped) {
+		this.huesped = huesped;
+	}
 	public void verificarDisponibilidad(Habitacion habitacion) {
 		
-		for (int i = 0; i < habitaciones.size(); i++) {
+		
 			
-			if (habitaciones.isEmpty()) {
-				JOptionPane.showMessageDialog(null, "No hay habitaciones asignadas");
-			} else {
-				if (this.getNumeroHabitacion() == this.getNumeroHabitacion()) {
-					JOptionPane.showMessageDialog(null, "ya hay una reserva a esa habitacion");
+			for (Integer habita : habitaciones) {
+				
+				if (this.getHabitaciones().size() == habita) {
+					JOptionPane.showMessageDialog(null, "ya hay una habitacion reservada");
+					break;
+					
 				} else {
-					JOptionPane.showMessageDialog(null, "Puede adquirir la habitacion " + habitacion);
+					JOptionPane.showMessageDialog(null, "Esta disponible la " + habitacion);
 				}
+				
 			}
 			
-		}
+		
 		
 	}
 	

@@ -10,7 +10,7 @@ public class Hotel {
 	private int precioXNoche;
 	private Huesped huesped;
 	
-	public Hotel(String nombre, int estrellas, String direccion, int precioXNoche, Huesped huesped) {
+	public Hotel(String nombre, int estrellas, String direccion, Huesped huesped) {
 		super();
 		this.nombre = nombre;
 		this.estrellas = estrellas;

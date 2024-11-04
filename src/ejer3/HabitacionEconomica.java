@@ -7,8 +7,10 @@ public class HabitacionEconomica extends Habitacion{
 	private boolean tieneBalcon;
 
 
-	public HabitacionEconomica(Hotel hotel, int numeroHabitacion, boolean tieneBalcon) {
-		super( hotel, numeroHabitacion);
+	
+
+	public HabitacionEconomica(Hotel hotel, int numeroHabitacion, Huesped huesped, boolean tieneBalcon) {
+		super(numeroHabitacion, huesped);
 		this.tieneBalcon = tieneBalcon;
 	}
 

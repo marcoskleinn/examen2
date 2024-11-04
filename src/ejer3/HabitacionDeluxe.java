@@ -6,9 +6,11 @@ public class HabitacionDeluxe extends Habitacion{
 	
 	private boolean camaMasaje;
 
+	
 
-	public HabitacionDeluxe(Hotel hotel, int numeroHabitacion, boolean camaMasaje) {
-		super(hotel, numeroHabitacion);
+	
+	public HabitacionDeluxe(Hotel hotel, int numeroHabitacion, Huesped huesped, boolean camaMasaje) {
+		super(numeroHabitacion, huesped);
 		this.camaMasaje = camaMasaje;
 	}
 
